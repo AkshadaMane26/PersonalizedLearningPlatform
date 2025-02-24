@@ -24,22 +24,24 @@ const Signup = () => {
   };
 
   return (
-    <div className="auth-container">
+    <div className="signup-container">
       {alertMessage && <div className={`alert ${alertType}`}>{alertMessage}</div>}
-      <h2>Signup</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Name" required onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
-        <input type="email" placeholder="Email" required onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-        <input type="password" placeholder="Password" required onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
-        <select required onChange={(e) => setFormData({ ...formData, role: e.target.value })}>
-          <option value="">Select Role</option>
-          <option value="student">Student</option>
-          <option value="teacher">Teacher</option>
-          <option value="parent">Parent</option>
-        </select>
-        <button type="submit">Signup</button>
-      </form>
-      <p>Already have an account? <Link to="/">Login here</Link></p>
+      <div className="signup-box">
+        <h2>Signup</h2>
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Name" required onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+          <input type="email" placeholder="Email" required onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+          <input type="password" placeholder="Password" required onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
+          <select required onChange={(e) => setFormData({ ...formData, role: e.target.value })}>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="parent">Parent</option>
+          </select>
+          <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <Link to="/">Login here</Link></p>
+      </div>
     </div>
   );
 };

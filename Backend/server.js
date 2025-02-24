@@ -1,11 +1,21 @@
+const dotenv = require("dotenv");
+const path = require("path");
+
+// Manually specify the `.env` file path
+dotenv.config({ path: path.resolve(__dirname, ".env") });
+
+console.log("GOOGLE_API_KEY:", process.env.GEMINI_API_KEY);
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const dotenv = require("dotenv");
-const authRoutes = require("./routes/authRoutes");
 
-dotenv.config();
+const authRoutes = require("./routes/authRoutes");
+const studyMaterialRoutes = require("./routes/studyMaterialRoutes");
+const quizRoutes = require("./routes/quiz.routes"); // ✅ Import Quiz Routes
+
 const app = express();
+
 
 // Middleware
 app.use(express.json());
@@ -18,7 +28,10 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/studyMaterial", studyMaterialRoutes);
+app.use("/api/quiz", quizRoutes); // ✅ Add Quiz Routes
 
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+

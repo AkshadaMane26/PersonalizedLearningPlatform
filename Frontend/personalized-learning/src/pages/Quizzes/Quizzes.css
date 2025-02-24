@@ -1,0 +1,103 @@
+.quizzes-container {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: black; /* Ensures all text inside is black */
+  gap: 10px;
+}
+
+.quiz-form input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: black;
+  background: white;
+}
+
+.quiz-form button {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: black;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.quiz-form button:hover {
+  background: #0056b3;
+}
+
+.quiz-section {
+  text-align: left;
+  margin-top: 20px;
+  color: black;
+}
+
+.question {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.question p {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Style the option labels */
+label {
+  display: block;
+  margin: 5px 0;
+  color: black !important; /* Ensures option text is black */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+  accent-color: black; /* Changes radio button color */
+  margin-right: 8px;
+}
+
+/* When hovering over an option */
+label:hover {
+  color: #007bff; /* Changes text color when hovering */
+}
+
+.quiz-results {
+  margin-top: 20px;
+  background: #d4edda;
+  padding: 15px;
+  border-radius: 5px;
+  color: black;
+}
+
+.quiz-results h3 {
+  color: black;
+}
+
+.quiz-results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quiz-results li {
+  background: #f8f9fa;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 3px;
+  color: black;
+}

@@ -1,12 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("abc.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .login-container {
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-  }
-  input, select, button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-  }
-  
+  width:800px;
+}
+.new-signup{
+  width:150px;
+}
+.login-box {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.login-left {
+  width: 50%;
+  padding: 30px;
+  text-align: center;
+}
+
+h2 {
+  color: #002b5c;
+}
+
+.elements input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #002b5c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.login-btn{
+  width: 100px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.register-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+.login-right {
+  width: 50%;
+  background: linear-gradient(120deg, #002b5c, #007bff);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-right h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.alumni-signup {
+  background: white;
+  color: #002b5c;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.alumni-signup:hover {
+  background: #f8f9fa;
+}

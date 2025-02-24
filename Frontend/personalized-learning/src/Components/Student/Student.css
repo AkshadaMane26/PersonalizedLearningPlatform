@@ -1,0 +1,202 @@
+.main-content-top {
+  width: 100%;
+  background-color: #dcbea2;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* Global Reset */
+html, body {
+  overflow-x: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1E1E2E;
+
+}
+
+/* Main Layout */
+.student-layout {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color: #1E1E2E;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header */
+.student-layout h1 {
+  margin-left: 20px;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #1E1E2E;
+
+}
+
+/* Main Content Wrapper */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  transition: margin-left 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #4B382A;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Sidebar Closed */
+.sidebar.closed {
+  width: 80px; /* Sidebar shrinks when closed */
+}
+
+/* Content Area (Adjusts Based on Sidebar) */
+.content-area {
+  background-color: #1e1e2e;
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 60px); /* Takes remaining space after header */
+  transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Adjust content area when sidebar is closed */
+.sidebar.closed + .content-area {
+  margin-left: -180px; /* Shift content left when sidebar is closed */
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+  gap: 20px;
+  padding: 20px;
+  align-items: stretch; /* Ensures equal height */
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row on mobile */
+  }
+}
+
+
+
+/* Adjust Grid when Sidebar is Open */
+.sidebar:not(.closed) + .content-area .dashboard-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Smaller cards */
+}
+
+/* Individual Dashboard Cards */
+.dashboard-grid > div {
+  background: #252532;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  min-height: 150px;
+}
+
+/* Learning Streak */
+.learning-streak {
+  background: linear-gradient(135deg, #FF8C00, #FF4500);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.streak-box h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Achievements & Rewards */
+.achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  background: #333;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* Performance Report */
+.performance-report .bar-chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.performance-report .bar {
+  width: 20px;
+  background: linear-gradient(180deg, #FF8C00, #FF4500);
+  border-radius: 5px;
+}
+
+/* Weekly Learning Goals */
+.weekly-goals ul {
+  list-style: none;
+  padding: 0;
+}
+
+.weekly-goals li {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* Leaderboard */
+.leaderboard ol {
+  list-style: none;
+  padding: 0;
+}
+
+.leaderboard li {
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* AI Recommendations */
+.ai-recommendation .recommendation-box {
+  background: #FF4500;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Scrollbar Styling */
+.content-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.content-area::-webkit-scrollbar-track {
+  background: #1E1E2E;
+}

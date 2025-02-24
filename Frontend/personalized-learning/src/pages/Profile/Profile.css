@@ -1,0 +1,174 @@
+.profile-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    background: #1e3a8a;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    border-radius: 50%;
+  }
+  
+  .profile-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1e3a8a;
+  }
+  
+  .rank {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .edit-btn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 120px;
+  }
+  
+  .edit-btn:hover {
+    background: #153070;
+  }
+  
+  /* Quiz Performance */
+  .quiz-section h3, 
+  .badges-section h3, 
+  .streak-section h3, 
+  .community-stats h3 {
+    color: #1e3a8a;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .quiz-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .quiz-item {
+    flex: 1;
+    padding: 10px;
+    background: #e3eafc;
+    color: #1e3a8a;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .easy {
+    background: #d1f0d1;
+    color: #107c10;
+  }
+  
+  .medium {
+    background: #ffe5b4;
+    color: #b36b00;
+  }
+  
+  .hard {
+    background: #f8d7da;
+    color: #b30000;
+  }
+  
+  /* Badges */
+  .badges-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+  }
+  
+  .badge-icon {
+    font-size: 1.2rem;
+  }
+  
+  .gold {
+    color: gold;
+  }
+  
+  .silver {
+    color: silver;
+  }
+  
+  .bronze {
+    color: #cd7f32;
+  }
+  
+  /* Streak */
+  .streak-days, .streak-max {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Community Stats */
+  .community-stats .stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #444;
+    margin: 5px 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .profile-container {
+      padding: 15px;
+    }
+    
+    .profile-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .quiz-box, .badges-box {
+      flex-direction: column;
+    }
+  }
+  

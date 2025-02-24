@@ -1,35 +1,39 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.auth-container {
-  width: 320px;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.signup-container {
+  width: 600px;
+  margin: auto;
   text-align: center;
 }
 
+.signup-box {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 h2 {
-  color: #333;
+  color: #002b5c;
+}
+
+.signup-box input, select{
+margin: 10px 5px;
+width: 500px;
+}
+
+.signup-box select{
+  width: 510px;
 }
 
 input, select, button {
-  width: 100%;
+  width: 500px;
   padding: 10px;
-  margin: 8px 0;
+  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
 
 button {
-  background-color: #007bff;
+  background-color: #002b5c;
   color: white;
   border: none;
   cursor: pointer;

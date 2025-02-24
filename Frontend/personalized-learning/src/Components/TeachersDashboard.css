@@ -1,0 +1,203 @@
+/* General Dashboard Styles */
+
+body, html {
+    background-color: #000; /* Black background */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+/* Style for the Logout button */
+.logout-btn {
+    background-color: #0056b3; /* Orange button */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Distance from top */
+    right: 20px; /* Distance from right */
+}
+
+
+/* Hover effect */
+.logout-btn:hover {
+    background-color: #042343;
+}
+
+
+.dashboard-container {
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px !important;
+}
+
+/* Ensure proper grid layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Create dashboard-style layout */
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Card Styling */
+.card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+.card h2{
+color: #fff;
+}
+/* Center Align Charts */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+/* TeachersDashboard.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 20px;
+    width: 90%;
+}
+
+/* Title Styling */
+.dashboard-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00c8ff;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #292929;
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.leaderboard {
+    margin-top: 30px;
+    width: 76%; /* Adjust width to match upper section */
+    background: #222; /* Slightly lighter dark background */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.leaderboard table {
+    width: 80%;
+    color: white;
+    margin-left: 120px;
+    margin-bottom: 30px;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 10px;
+    text-align: center;
+}
+
+.leaderboard th {
+    background-color: #ff9800;
+}
+
+/* AI Insights */
+.ai-insights {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 76%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px !important;
+}
+
+.ai-insights button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ai-insights button:hover {
+    background: #008FCC;
+}
+
+.ai-insights h2{
+    color: #fff;
+}
+/* Button Styling */
+.button {
+    background-color: #00c8ff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 200px;
+}
+
+.button:hover {
+    background-color: #0077b6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+}
